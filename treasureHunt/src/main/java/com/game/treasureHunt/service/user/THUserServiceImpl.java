@@ -1,4 +1,4 @@
-package com.game.treasureHunt.service;
+package com.game.treasureHunt.service.user;
 
 import com.game.treasureHunt.config.constants.THUserCredentials;
 import com.game.treasureHunt.config.forms.THUserForm;

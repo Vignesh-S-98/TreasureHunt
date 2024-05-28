@@ -11,5 +11,6 @@ public interface THJspConstants {
     }
     interface Game{
         String GAME = Action.GAME+"THGaming";
+        String QUESTIONS = Action.GAME+"THQuestions";
     }
 }
