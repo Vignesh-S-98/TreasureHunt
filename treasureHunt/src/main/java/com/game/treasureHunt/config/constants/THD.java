@@ -1,69 +1,67 @@
 package com.game.treasureHunt.config.constants;
-
+/**
+ * 10 questions, 10 answers, 5 gifts
+ * 10 questions in each level and only once a level can be selected
+ * answer is common for all the questions
+ * Game flow --> Q1 -> A1 -> Q2 -> A2 -> G1 -> Q3 -> A3 -> Q4 -> A4 -> G2 ->
+ * Q5 -> A5 -> Q6 -> A6 -> G3 -> Q7 -> A7 -> Q8 -> A8 -> G4 ->
+ * Q9 -> A9 -> Q10 -> A10 -> G5
+ * */
 public interface THD {
-    interface QuestionConstants{
-        public static String THDQuestion_Easy_Q1 = "Hi1";
-        public static String THDQuestion_Easy_Q2 = "Hi2";
-        public static String THDQuestion_Easy_Q3 = "Hi3";
-        public static String THDQuestion_Easy_Q4 = "Hi4";
-        public static String THDQuestion_Easy_Q5 = "Hi5";
-        public static String THDQuestion_Easy_Q6 = "Hi6";
-        public static String THDQuestion_Easy_Q7 = "Hi7";
-        public static String THDQuestion_Easy_Q8 = "Hi8";
-        public static String THDQuestion_Easy_Q9 = "Hi9";
-        public static String THDQuestion_Easy_Q10 = "Hi10";
-        public static String THDQuestion_Medium_Q1 = "Hello1";
-        public static String THDQuestion_Medium_Q2 = "Hello2";
-        public static String THDQuestion_Medium_Q3 = "Hello3";
-        public static String THDQuestion_Medium_Q4 = "Hello4";
-        public static String THDQuestion_Medium_Q5 = "Hello5";
-        public static String THDQuestion_Medium_Q6 = "Hello6";
-        public static String THDQuestion_Medium_Q7 = "Hello7";
-        public static String THDQuestion_Medium_Q8 = "Hello8";
-        public static String THDQuestion_Medium_Q9 = "Hello9";
-        public static String THDQuestion_Medium_Q10 = "Hello10";
-        public static String THDQuestion_Difficult_Q1 = "Welcome1";
-        public static String THDQuestion_Difficult_Q2 = "Welcome2";
-        public static String THDQuestion_Difficult_Q3 = "Welcome3";
-        public static String THDQuestion_Difficult_Q4 = "Welcome4";
-        public static String THDQuestion_Difficult_Q5 = "Welcome5";
-        public static String THDQuestion_Difficult_Q6 = "Welcome6";
-        public static String THDQuestion_Difficult_Q7 = "Welcome7";
-        public static String THDQuestion_Difficult_Q8 = "Welcome8";
-        public static String THDQuestion_Difficult_Q9 = "Welcome9";
-        public static String THDQuestion_Difficult_Q10 = "Welcome10";
+    interface EASYQUESTIONCONSTANTS {
+        public static String THDQuestion_Easy_Q1 = "Easy1";
+        public static String THDQuestion_Easy_Q2 = "Easy2";
+        public static String THDQuestion_Easy_Q3 = "Easy3";
+        public static String THDQuestion_Easy_Q4 = "Easy4";
+        public static String THDQuestion_Easy_Q5 = "Easy5";
+        public static String THDQuestion_Easy_Q6 = "Easy6";
+        public static String THDQuestion_Easy_Q7 = "Easy7";
+        public static String THDQuestion_Easy_Q8 = "Easy8";
+        public static String THDQuestion_Easy_Q9 = "Easy9";
+        public static String THDQuestion_Easy_Q10 = "Easy10";
+    }
+    interface MEDIUMQUESTIONCONSTANTS {
+        public static String THDQuestion_Medium_Q1 = "Medium1";
+        public static String THDQuestion_Medium_Q2 = "Medium2";
+        public static String THDQuestion_Medium_Q3 = "Medium3";
+        public static String THDQuestion_Medium_Q4 = "Medium4";
+        public static String THDQuestion_Medium_Q5 = "Medium5";
+        public static String THDQuestion_Medium_Q6 = "Medium6";
+        public static String THDQuestion_Medium_Q7 = "Medium7";
+        public static String THDQuestion_Medium_Q8 = "Medium8";
+        public static String THDQuestion_Medium_Q9 = "Medium9";
+        public static String THDQuestion_Medium_Q10 = "Medium10";
+    }
+    interface HARDQUESTIONCONSTANTS {
+        public static String THDQuestion_Difficult_Q1 = "Hard1";
+        public static String THDQuestion_Difficult_Q2 = "Hard2";
+        public static String THDQuestion_Difficult_Q3 = "Hard3";
+        public static String THDQuestion_Difficult_Q4 = "Hard4";
+        public static String THDQuestion_Difficult_Q5 = "Hard5";
+        public static String THDQuestion_Difficult_Q6 = "Hard6";
+        public static String THDQuestion_Difficult_Q7 = "Hard7";
+        public static String THDQuestion_Difficult_Q8 = "Hard8";
+        public static String THDQuestion_Difficult_Q9 = "Hard9";
+        public static String THDQuestion_Difficult_Q10 = "Hard10";
     }
 
-    interface AnswerConstatnts{
-        public static String THDAnswer_Easy_A1 = "A1";
-        public static String THDAnswer_Easy_A2 = "A2";
-        public static String THDAnswer_Easy_A3 = "A3";
-        public static String THDAnswer_Easy_A4 = "A4";
-        public static String THDAnswer_Easy_A5 = "A5";
-        public static String THDAnswer_Easy_A6 = "A6";
-        public static String THDAnswer_Easy_A7 = "A7";
-        public static String THDAnswer_Easy_A8 = "A8";
-        public static String THDAnswer_Easy_A9 = "A9";
-        public static String THDAnswer_Easy_A10 = "A10";
-        public static String THDAnswer_Medium_A1 = "B1";
-        public static String THDAnswer_Medium_A2 = "B2";
-        public static String THDAnswer_Medium_A3 = "B3";
-        public static String THDAnswer_Medium_A4 = "B4";
-        public static String THDAnswer_Medium_A5 = "B5";
-        public static String THDAnswer_Medium_A6 = "B6";
-        public static String THDAnswer_Medium_A7 = "B7";
-        public static String THDAnswer_Medium_A8 = "B8";
-        public static String THDAnswer_Medium_A9 = "B9";
-        public static String THDAnswer_Medium_A10 = "B10";
-        public static String THDAnswer_Difficult_A1 = "C1";
-        public static String THDAnswer_Difficult_A2 = "C2";
-        public static String THDAnswer_Difficult_A3 = "C3";
-        public static String THDAnswer_Difficult_A4 = "C4";
-        public static String THDAnswer_Difficult_A5 = "C5";
-        public static String THDAnswer_Difficult_A6 = "C6";
-        public static String THDAnswer_Difficult_A7 = "C7";
-        public static String THDAnswer_Difficult_A8 = "C8";
-        public static String THDAnswer_Difficult_A9 = "C9";
-        public static String THDAnswer_Difficult_A10 = "C10";
+    interface AnswerConstants{
+        public static String A1 = "A1";
+        public static String A2 = "A2";
+        public static String A3 = "A3";
+        public static String A4 = "A4";
+        public static String A5 = "A5";
+        public static String A6 = "A6";
+        public static String A7 = "A7";
+        public static String A8 = "A8";
+        public static String A9 = "A9";
+        public static String A10 = "A10";
+    }
+    interface Gifts{
+        public static String G1 ="G1"; //happy birthday
+        public static String G2 ="G2"; // gold
+        public static String G3 ="G3"; // pen
+        public static String G4 ="G4"; // book pin
+        public static String G5 ="G5"; // book
     }
 }

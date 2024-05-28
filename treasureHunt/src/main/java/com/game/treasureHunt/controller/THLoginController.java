@@ -2,7 +2,7 @@ package com.game.treasureHunt.controller;
 
 import com.game.treasureHunt.config.forms.THUserForm;
 import com.game.treasureHunt.config.constants.THJspConstants;
-import com.game.treasureHunt.service.THUserService;
+import com.game.treasureHunt.service.user.THUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

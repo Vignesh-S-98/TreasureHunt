@@ -17,7 +17,7 @@
         <p>You are logged into a <form:input path="userRole" readonly="true" /> account</p>
     </form:form>
      <form action="/game" method="get">
-            <button type="submit">Let''s play</button>
+            <button type="submit">Let's play</button>
 </div>
 </body>
 </html>
