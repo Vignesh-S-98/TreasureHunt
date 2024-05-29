@@ -19,7 +19,7 @@ public class THLoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String goToLoginPage() {
-        return THJspConstants.Login.LOGIN;
+        return THJspConstants.UserFlow.LOGIN;
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -36,10 +36,10 @@ public class THLoginController {
         userForm.setUserRole(getUserService().loggedUserRole(userForm.getUserName()));
         if(getUserService().userAuthentication(userForm)){
             modelMap.addAttribute("userForm", userForm);
-            return THJspConstants.Login.WELCOME;
+            return THJspConstants.UserFlow.WELCOME;
         }
         modelMap.addAttribute("errorMessage","Invalid User Credentials");
-        return THJspConstants.Login.LOGIN;
+        return THJspConstants.UserFlow.LOGIN;
     }
 
     public THUserService getUserService() {

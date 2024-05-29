@@ -23,8 +23,13 @@
             font-size: 16px;
         }
     </style>
-    <script>
-        function submitForm() {
+ <script>
+        function validateAndSubmitForm() {
+            var rating = document.getElementById("rating").value;
+            if (rating === "") {
+                alert("Please select a rating before starting the game.");
+                return false;
+            }
             document.getElementById("ratingForm").submit();
         }
     </script>
@@ -44,14 +49,17 @@
     <form id="ratingForm" action="/game" method="post">
         <h3>Hey ${userForm.userName}</h3>
         <label for="rating">Select Difficulty Rating:</label>
-        <select id="rating" name="rating" onchange="submitForm()">
+        <select id="rating" name="rating">
             <option value="">Select the rating</option>
             <c:forEach items="${ratings}" var="rating">
                 <option value="${rating}">${rating.rating}</option>
             </c:forEach>
         </select>
-        <button type="submit">Start Game</button>
+        <button type="button" onclick="validateAndSubmitForm()">Start Game</button>
     </form>
+    <c:if test="${not empty error}">
+        <div style="color:red;">${error}</div>
+    </c:if>
 </div>
 
 </body>

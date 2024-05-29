@@ -3,8 +3,10 @@ package com.game.treasureHunt.config.constants;
  * 10 questions, 10 answers, 5 gifts
  * 10 questions in each level and only once a level can be selected
  * answer is common for all the questions
- * Game flow --> Q1 -> A1 -> Q2 -> A2 -> G1 -> Q3 -> A3 -> Q4 -> A4 -> G2 ->
- * Q5 -> A5 -> Q6 -> A6 -> G3 -> Q7 -> A7 -> Q8 -> A8 -> G4 ->
+ * Game flow --> Q1 -> A1 -> Q2 -> A2 -> G1 ->
+ * Q3 -> A3 -> Q4 -> A4 -> G2 ->
+ * Q5 -> A5 -> Q6 -> A6 -> G3 ->
+ * Q7 -> A7 -> Q8 -> A8 -> G4 ->
  * Q9 -> A9 -> Q10 -> A10 -> G5
  * */
 public interface THD {
@@ -45,7 +47,7 @@ public interface THD {
         public static String THDQuestion_Difficult_Q10 = "Hard10";
     }
 
-    interface AnswerConstants{
+    interface ANSWERCONSTANTS{
         public static String A1 = "A1";
         public static String A2 = "A2";
         public static String A3 = "A3";
@@ -57,7 +59,7 @@ public interface THD {
         public static String A9 = "A9";
         public static String A10 = "A10";
     }
-    interface Gifts{
+    interface GIFTCONSTANTS{
         public static String G1 ="G1"; //happy birthday
         public static String G2 ="G2"; // gold
         public static String G3 ="G3"; // pen
