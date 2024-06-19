@@ -11,7 +11,9 @@ package com.game.treasureHunt.config.constants;
  * */
 public interface THD {
     interface EASYQUESTIONCONSTANTS {
-        public static String THDQuestion_Easy_Q1 = "Easy1";
+        public static String THDQuestion_Easy_Q1 = "Hey the word of the day," +
+                "<br>Sun is in the east " +
+                "<br>earth is us";
         public static String THDQuestion_Easy_Q2 = "Easy2";
         public static String THDQuestion_Easy_Q3 = "Easy3";
         public static String THDQuestion_Easy_Q4 = "Easy4";

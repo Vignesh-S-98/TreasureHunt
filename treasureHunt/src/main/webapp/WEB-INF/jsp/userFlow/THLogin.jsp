@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,6 +9,7 @@
         position: fixed;
         height: 100%;
         width: 100%;
+        background-color: rgb(201, 203, 210);
       }
 
       html::before {
@@ -17,10 +20,10 @@
         right: 0;
         bottom: 0;
         background-image: url("../../../solution/dog.png");
-        background-size: cover; /* Make sure the image covers the entire background */
-        background-repeat: no-repeat; /* Prevent the image from repeating */
-        opacity: 0.5; /* Adjust the opacity to your desired level */
-        z-index: -1; /* Ensure the background stays behind all content */
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        z-index: -1;
       }
 
       .container {
@@ -31,7 +34,7 @@
       }
 
       .error-popup {
-        display: none; /* Initially hide the error popup */
+        display: none;
       }
 
       .error-popup pre {
@@ -47,7 +50,7 @@
         transform: translateX(-50%);
         width: 60%;
         text-align: center;
-        z-index: 1000; /* Ensure it appears above other elements */
+        z-index: 1000;
       }
 
       fieldset {
@@ -142,7 +145,7 @@
           }
 
           if (errorMessage) {
-            event.preventDefault(); // Prevent form submission
+            event.preventDefault();
             errorMessageElement.textContent = errorMessage;
             document.getElementById("errorPopup").style.display = "block";
           }
