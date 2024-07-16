@@ -1,0 +1,58 @@
+html {
+  background-color: rgb(141, 122, 246);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+fieldset {
+  border: 2px solid rgb(62, 8, 239);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(181, 198, 234);
+}
+
+legend {
+  color: rgb(35, 0, 149);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+form {
+  color: rgb(62, 8, 239);
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  color: rgb(68, 138, 14);
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: rgb(62, 8, 239);
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(35, 0, 149);
+}

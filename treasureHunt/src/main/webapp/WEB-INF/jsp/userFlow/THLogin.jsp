@@ -1,0 +1,158 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      html {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(201, 203, 210);
+        cursor: default;
+        user-select: none;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .error-popup {
+        display: none;
+      }
+
+      .error-popup pre {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 10px;
+        padding-left: 5px;
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      fieldset {
+        border: 2px solid rgb(62, 8, 239);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgb(181, 198, 234);
+      }
+
+      legend {
+        color: rgb(0, 128, 128);
+        background-color: rgb(167, 199, 231);
+        transition: background-color 0.5s, color 0.5s;
+        font-weight: bold;
+        font-family: cursive;
+        text-align: center;
+        padding: 0px;
+        padding-bottom: 4px;
+        text-shadow: 1em;
+        font-size: larger;
+      }
+      legend:hover {
+        color: rgb(25, 220, 220);
+        background-color: rgb(129, 182, 235);
+      }
+
+      form {
+        color: rgb(62, 8, 239);
+        font-weight: bold;
+        font-family: cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      label {
+        margin-bottom: 5px;
+        font-size: larger;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        color: rgb(68, 138, 14);
+        margin-bottom: 10px;
+        cursor: text;
+        display: inline-block;
+      }
+
+      button {
+        background-color: rgb(180, 167, 222);
+        transition: background-color 1s;
+        color: rgb(0, 102, 255);
+        text-align: center;
+        font-size: 16px;
+        border: 2px dotted black;
+        margin-left: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 75px;
+        padding: 0.1em;
+        font-family: cursive;
+      }
+
+      button:hover {
+        background-color: rgb(84, 197, 113);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <legend>Login to enter the game</legend>
+        <form id="loginForm" method="post" action="/login">
+          <div class="error-popup" id="errorPopup">
+            <pre id="errorMessage">${errorMessage}</pre>
+          </div>
+          <label for="userName">Name:</label>
+          <input type="text" id="userName" name="userName" />
+          <br />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      </fieldset>
+    </div>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          const userName = document.getElementById("userName").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const errorMessageElement = document.getElementById("errorMessage");
+          let errorMessage = "";
+
+          if (!userName) {
+            errorMessage = "Username is required.";
+          } else if (!password) {
+            errorMessage = "Password is required.";
+          }
+
+          if (errorMessage) {
+            event.preventDefault();
+            errorMessageElement.textContent = errorMessage;
+            document.getElementById("errorPopup").style.display = "block";
+          }
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const errorMessageElement = document.getElementById("errorMessage");
+        if (errorMessageElement.textContent.trim()) {
+          document.getElementById("errorPopup").style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
